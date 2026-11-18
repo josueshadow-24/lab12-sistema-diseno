@@ -84,3 +84,16 @@ Se implementó el componente maestro **`Button`** con Auto Layout (`Hug contents
 | Antes (`"Button"`) | Después (`"Confirmar inscripción al curso"`) |
 | :---: | :---: |
 | ![Button Antes](assets/paso4-button-antes.png) | ![Button Después](assets/paso4-button-despues.png) |
+
+## Paso 5: Componente `Input` (5 estados y propiedades)
+
+Se implementó el componente maestro **`Input`** con estructura vertical (`Label`, `Field` de `44 px` de alto y `Helper text`), ancho base `320 px` (`min-width: 200 px`), padding interno `space/12` y `space/16`, gap `space/8` y radio `radius/md`:
+
+* **Propiedades de componente:** 3 `Text` (`Label`, `Placeholder`, `Helper`) y 2 `Boolean` (`Show helper`, `Show icon`).
+* **Variantes (`State`):** `Default`, `Focus` (borde `2 px` `color/border/focus`), `Filled` (`color/text/default`), `Error` (borde e ícono `color/feedback/error` + mensaje explícito WCAG 1.4.1) y `Disabled` (`color/bg/subtle` + opacidad `50%`).
+
+### Prueba de Estiramiento (Antes y Después)
+| Antes (`320 px`) | Después (`480 px`) |
+| :---: | :---: |
+| ![Input Antes](assets/paso5-input-antes.png) | ![Input Después](assets/paso5-input-despues.png) |
+
