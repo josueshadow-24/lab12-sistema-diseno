@@ -109,3 +109,42 @@ Se implementó el componente maestro **`Card`** con Auto Layout vertical (`W: 36
 | Antes (`360 px`) | Después (`520 px`) |
 | :---: | :---: |
 | ![Card Antes](assets/paso6-card-antes.png) | ![Card Después](assets/paso6-card-despues.png) |
+
+
+## Paso 7: Documentación, prueba del sistema y verificación
+
+### 1. Documentación de componentes y auditoría de tokens
+* **Página `Componentes`:** Se documentó cada *component set* (`Button`, `Input` y `Card`) con título, descripción de uso en el lienzo y metadatos en el campo *Description* del panel de propiedades.
+* **Auditoría de `Selection colors`:** Al seleccionar el frame `Portal Trámites - El Porvenir` (`1440 × 1024 px`), se verificó que todos los colores pertenecen exclusivamente a variables semánticas (`color/bg/primary`, `color/bg/surface`, `color/text/default`, `color/text/muted`, `color/text/on-primary`, `color/border/default`), sin ningún código hexadecimal suelto.
+* **Publicación de librería:** Debido a que el archivo trabaja en plan *Starter* (Gratuito), Figma no habilita la publicación externa de *component sets* como librería compartida entre archivos; la reutilización se verificó dentro del mismo proyecto mediante el panel *Recursos / Assets*.
+
+![Documentación de Componentes](assets/paso7-documentacion-componentes.png)
+![Auditoría Selection Colors](assets/paso7-selection-colors.png)
+
+### 2. Prueba de escalabilidad (`blue/700`)
+Se modificó temporalmente el valor del primitivo `blue/700` por un tono verde institucional (`#047857`), verificando que toda la pantalla de prueba y los componentes maestros se actualizaron simultáneamente sin ajustes manuales, regresando luego al azul institucional original.
+
+| Antes (`blue/700` original) | Después (cambio temporal de primitivo) |
+| :---: | :---: |
+| ![Antes](assets/paso7-escalabilidad-antes.png) | ![Después](assets/paso7-escalabilidad-despues.png) |
+
+### 3. Inventario del sistema de diseño
+
+| N° | Componente | Propiedades (tipo) | N° de variantes | Auto layout (dirección / padding / gap) | Tokens y estilos aplicados |
+| :--- | :--- | :--- | :---: | :--- | :--- |
+| **1** | **Button** | `Type`, `State` (variant); `Label` (text); `Show icon` (boolean); `Icon` (instance swap) | 12 | Horizontal / `12 · 24` / `8` | `color/bg/primary`, `color/text/on-primary`, `color/border/focus`, `radius/md`, `Label/Medium` |
+| **2** | **Input** | `State` (variant); `Label`, `Placeholder`, `Helper` (text); `Show helper`, `Show icon` (boolean) | 5 | Vertical (contenedor) / `0` / `8`; Horizontal (`Field`) / `12 · 16` / `8` | `color/bg/surface`, `color/bg/subtle`, `color/text/default`, `color/text/muted`, `color/border/default`, `color/border/focus`, `color/feedback/error`, `radius/md`, `Body/Regular`, `Label/Medium`, `Caption/Small` |
+| **3** | **Card** | `State` (variant); `Title`, `Description`, `Metadata` (text) | 2 | Vertical / `24 · 24` / `12` | `color/bg/surface`, `color/border/default`, `color/bg/primary`, `color/text/default`, `color/text/muted`, `radius/lg`, `Elevation/1`, `Heading/H3`, `Body/Regular`, `Caption/Small` |
+
+### 4. Lista de verificación del sistema
+
+| Criterio | Cumple (Sí / No) | Evidencia (captura) |
+| :--- | :---: | :--- |
+| Todos los colores de los componentes usan tokens semánticos (sin hexadecimales sueltos). | **Sí** | ![assets/paso7-selection-colors.png](assets/paso7-selection-colors.png)|
+| Todos los textos usan un text style de la escala tipográfica. | **Sí** | ![assets/paso7-documentacion-componentes.png](assets/paso7-documentacion-componentes.png) |
+| Padding, gap y radios están vinculados a variables de espaciado y radio. | **Sí** | ![assets/paso4-button-despues.png](assets/paso4-button-despues.png) ![assets/paso5-input-despues.png](assets/paso5-input-despues.png) |
+| Button tiene 12 variantes y un alto de objetivo ≥ 24 × 24 px. | **Sí** | `assets/paso4-button-variantes.png` ![assets/paso4-button-variantes.png](assets/paso4-button-variantes.png) |
+| Los estados Focus y Error son visibles y cumplen 3:1 de contraste no textual. | **Sí** | ![assets/paso5-input-antes.png](assets/paso5-input-antes.png) |
+| El texto cumple 4.5:1 de contraste en todas las variantes habilitadas. | **Sí** | ![assets/paso2-contraste-webaim.png](assets/paso2-contraste-webaim.png) ![assets/paso2-contraste-webaim-2.png](assets/paso2-contraste-webaim-2.png)  |
+| Al cambiar un primitivo o el componente maestro, la pantalla de prueba se actualiza sin ajustes manuales. | **Sí** | ![assets/paso7-escalabilidad-antes.png](assets/paso7-escalabilidad-antes.png) ![assets/paso7-escalabilidad-despues.png](assets/paso7-escalabilidad-despues.png)|
+| La pantalla de prueba está construida solo con instancias del sistema. | **Sí** | ![assets/paso7-pantalla-prueba.png](assets/paso7-pantalla-prueba.png) |
