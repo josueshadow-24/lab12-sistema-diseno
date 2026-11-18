@@ -72,3 +72,15 @@ En la página `Componentes` se desarrollaron los tres componentes reutilizables 
 * **`Card`:** Contenedor de servicio municipal (`360 px` de ancho) con estructura vertical (`space/12`), padding `space/24`, radio `12 px` y jerarquía tipográfica (`Heading/H2`, `Body/Regular` y `Caption/Small`).
 
 ![Componentes Base](assets/paso4-componentes-base.png)
+
+## Paso 4 extra: Componente `Button` (12 variantes y propiedades)
+
+Se implementó el componente maestro **`Button`** con Auto Layout (`Hug contents`, alto `44 px` ≥ `24×24 px` WCAG 2.5.8), paddings vinculados a `space/12` y `space/24`, gap `space/8` y radio `radius/md`:
+
+* **Propiedades de componente:** `Text` (`Label`), `Boolean` (`Show icon`) e `Instance swap` (`Icon` de `20×20 px`).
+* **Matriz de 12 variantes:** `Type` (`Primary`, `Secondary`, `Ghost`) × `State` (`Default`, `Hover`, `Focus` con anillo exterior `2 px` `color/border/focus` WCAG 2.4.7, y `Disabled`).
+
+### Prueba de Auto Layout (Antes y Después)
+| Antes (`"Button"`) | Después (`"Confirmar inscripción al curso"`) |
+| :---: | :---: |
+| ![Button Antes](assets/paso4-button-antes.png) | ![Button Después](assets/paso4-button-despues.png) |
