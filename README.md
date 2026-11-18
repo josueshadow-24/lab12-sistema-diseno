@@ -80,7 +80,7 @@ Se implementó el componente maestro **`Button`** con Auto Layout (`Hug contents
 * **Propiedades de componente:** `Text` (`Label`), `Boolean` (`Show icon`) e `Instance swap` (`Icon` de `20×20 px`).
 * **Matriz de 12 variantes:** `Type` (`Primary`, `Secondary`, `Ghost`) × `State` (`Default`, `Hover`, `Focus` con anillo exterior `2 px` `color/border/focus` WCAG 2.4.7, y `Disabled`).
 
-### Prueba de Auto Layout (Antes y Después)
+### Prueba de Auto Layout (antes y después)
 | Antes (`"Button"`) | Después (`"Confirmar inscripción al curso"`) |
 | :---: | :---: |
 | ![Button Antes](assets/paso4-button-antes.png) | ![Button Después](assets/paso4-button-despues.png) |
@@ -92,8 +92,20 @@ Se implementó el componente maestro **`Input`** con estructura vertical (`Label
 * **Propiedades de componente:** 3 `Text` (`Label`, `Placeholder`, `Helper`) y 2 `Boolean` (`Show helper`, `Show icon`).
 * **Variantes (`State`):** `Default`, `Focus` (borde `2 px` `color/border/focus`), `Filled` (`color/text/default`), `Error` (borde e ícono `color/feedback/error` + mensaje explícito WCAG 1.4.1) y `Disabled` (`color/bg/subtle` + opacidad `50%`).
 
-### Prueba de Estiramiento (Antes y Después)
+### Prueba de Estiramiento (antes y después)
 | Antes (`320 px`) | Después (`480 px`) |
 | :---: | :---: |
 | ![Input Antes](assets/paso5-input-antes.png) | ![Input Después](assets/paso5-input-despues.png) |
 
+
+## Paso 6: Componente `Card` (tarjeta de trámite municipal)
+
+Se implementó el componente maestro **`Card`** con Auto Layout vertical (`W: 360 px`, `min-width: 280 px`, `H: Hug`), gap `space/12`, padding `space/24`, superficie `color/bg/surface`, radio `radius/lg` y sombra `Elevation/1`:
+
+* **Propiedades de componente:** 3 `Text` (`Title`, `Description`, `Metadata`).
+* **Variantes (`State`):** `Default` (borde `1 px` `color/border/default`) y `Hover` (borde `2 px` `color/bg/primary` y elevación reforzada).
+
+### Prueba de responsividad / estiramiento (antes y después)
+| Antes (`360 px`) | Después (`520 px`) |
+| :---: | :---: |
+| ![Card Antes](assets/paso6-card-antes.png) | ![Card Después](assets/paso6-card-despues.png) |
