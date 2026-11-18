@@ -59,3 +59,16 @@ Se definieron 4 estilos tipográficos utilizando la familia **Inter**, organizad
 
 ![Estilos Tipográficos](assets/paso3-estilos-tipografia.png)
 ![Documentación Tipografía y Espaciado](assets/paso3-fundamentos-completo.png)
+
+
+## Paso 4: Componente botón con auto layout y variantes
+
+En la página `Componentes` se desarrollaron los tres componentes reutilizables del sistema utilizando **Auto Layout** y vinculando todas sus propiedades visuales a las variables semánticas (`Tokens`) y estilos tipográficos:
+
+* **`Button`:** Componente con variantes de estado `State` (`Default`, `Hover` y `Disabled`), paddings vinculados a `space/24` y `space/12`, bordes redondeados (`8 px`) y colores `color/bg/primary`, `color/bg/primary-hover` y `color/text/on-primary`.
+![Evidencia de button](assets/paso4-componente-button.png)
+* **`Input`:** Campo de entrada con ancho fijo (`320 px`), paddings `space/16` y `space/12`, superficie `color/bg/surface` y variantes de estado `State` (`Default`, `Focus` y `Error`) vinculadas a los tokens de borde correspondientes.
+![Evidencia de input](assets/paso4-componente-input.png)
+* **`Card`:** Contenedor de servicio municipal (`360 px` de ancho) con estructura vertical (`space/12`), padding `space/24`, radio `12 px` y jerarquía tipográfica (`Heading/H2`, `Body/Regular` y `Caption/Small`).
+
+![Componentes Base](assets/paso4-componentes-base.png)
