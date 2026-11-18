@@ -1,7 +1,7 @@
 # Laboratorio N° 12: Implementación de un sistema de diseño
 
 
-**Repositorio GitHub:** [...](...)
+**Repositorio GitHub:** [https://github.com/josueshadow-24/lab12-sistema-diseno.git](https://github.com/josueshadow-24/lab12-sistema-diseno.git)
 
 **Proyecto Base:** Portal Web - Municipalidad Distrital de El Porvenir
 ---
@@ -21,3 +21,22 @@ Al auditar la interfaz rediseñada en el Laboratorio 11 (`Municipalidad de El Po
 * **Botones:** 3 estilos distintos de botones con variaciones en bordes, alturas y rellenos.
 
 ![Inventario UI](assets/paso1-inventario-ui.png)
+
+## Paso 2: Paleta de color con variables (design tokens)
+
+### 2.1 Colección `primitives` y `tokens`
+Se implementó una arquitectura de dos niveles en Figma variables:
+* **`Primitives` (11 variables):** Escala base de colores (`blue`, `gray`, `red`, `green`) con valores hexadecimales puros.
+* **`Tokens` (9 variables semánticas):** Tokens agrupados por propósito (`color/bg/*`, `color/text/*`, `color/border/*`, `color/feedback/*`) vinculados mediante alias hacia los primitivos.
+
+![Colección Primitives](assets/paso2-primitives.png)
+![Colección Tokens](assets/paso2-tokens.png)
+
+### 2.2 Documentación visual y verificación de contraste (WCAG AA)
+Se plasmaron las muestras cromáticas vinculadas a los tokens en la página `Fundamentos` y se validaron los ratios de contraste en WebAIM (superando el mínimo de `4.5:1` exigido):
+* `color/text/on-primary` (`#FFFFFF`) sobre `color/bg/primary` (`#1F4E79`): **8.66:1 (Pass AA/AAA)**
+* `color/text/default` (`#1A1A1A`) sobre `color/bg/surface` (`#FFFFFF`): **17.40:1 (Pass AA/AAA)**
+
+![Paleta de color en fundamentos](assets/paso2-paleta-fundamentos.png)
+![Validación WebAIM](assets/paso2-contraste-webaim.png)
+![Validación WebAIM](assets/paso2-contraste-webaim-2.png)
