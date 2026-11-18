@@ -40,3 +40,22 @@ Se plasmaron las muestras cromáticas vinculadas a los tokens en la página `Fun
 ![Paleta de color en fundamentos](assets/paso2-paleta-fundamentos.png)
 ![Validación WebAIM](assets/paso2-contraste-webaim.png)
 ![Validación WebAIM](assets/paso2-contraste-webaim-2.png)
+
+---
+
+## Paso 3: Escala tipográfica y tokens de espaciado
+
+### 3.1 Tokens de espaciado 
+Se incorporaron 6 variables numéricas en la colección `Tokens` bajo el grupo `space` (`4`, `8`, `12`, `16`, `24` y `32` píxeles) para estandarizar márgenes, paddings y separaciones entre elementos.
+
+![Tokens de Espaciado](assets/paso3-tokens-espaciado.png)
+
+### 3.2 Escala tipográfica 
+Se definieron 4 estilos tipográficos utilizando la familia **Inter**, organizados jerárquicamente:
+* **`Heading/H1`:** Inter Bold · `32 px` / `40 px`
+* **`Heading/H2`:** Inter Semi Bold · `24 px` / `32 px`
+* **`Body/Regular`:** Inter Regular · `16 px` / `24 px`
+* **`Caption/Small`:** Inter Regular · `12 px` / `16 px`
+
+![Estilos Tipográficos](assets/paso3-estilos-tipografia.png)
+![Documentación Tipografía y Espaciado](assets/paso3-fundamentos-completo.png)
